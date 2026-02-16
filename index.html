@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosa Fare Quando Si Avvista un Alieno</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        main {
+            padding: 40px;
+        }
+        
+        .intro {
+            background: #f0f4ff;
+            padding: 20px;
+            border-left: 5px solid #667eea;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+        
+        .intro p {
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .steps {
+            display: grid;
+            gap: 25px;
+        }
+        
+        .step {
+            border: 2px solid #e0e0e0;
+            padding: 25px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .step:hover {
+            border-color: #667eea;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.1);
+        }
+        
+        .step-number {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .step h3 {
+            color: #333;
+            margin: 10px 0 15px 0;
+            font-size: 1.3em;
+        }
+        
+        .step p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 5px;
+        }
+        
+        .warning strong {
+            color: #856404;
+        }
+        
+        .warning p {
+            color: #856404;
+            margin: 5px 0;
+        }
+        
+        .do-dont {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .do, .dont {
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        .do {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+        }
+        
+        .do h4 {
+            color: #155724;
+            margin-bottom: 10px;
+        }
+        
+        .do ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .do li {
+            color: #155724;
+            margin: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .do li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+        }
+        
+        .dont {
+            background: #f8d7da;
+            border-left: 5px solid #dc3545;
+        }
+        
+        .dont h4 {
+            color: #721c24;
+            margin-bottom: 10px;
+        }
+        
+        .dont ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .dont li {
+            color: #721c24;
+            margin: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .dont li:before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            color: #dc3545;
+            font-weight: bold;
+        }
+        
+        footer {
+            background: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        footer p {
+            margin: 5px 0;
+        }
+        
+        .emoji {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+        
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            
+            .do-dont {
+                grid-template-columns: 1fr;
+            }
+            
+            main {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>👽 Cosa Fare Quando Si Avvista un Alieno 👽</h1>
+            <p>Guida pratica di sopravvivenza interplanetaria</p>
+        </header>
+        
+        <main>
+            <div class="intro">
+                <p>
+                    <strong>Avete appena avvistato un alieno?</strong> Non abbiate paura! Seguendo questa guida, potrete gestire l'incontro in modo sicuro e responsabile. 
+                    Ricordate: la calma è fondamentale in qualsiasi situazione.
+                </p>
+            </div>
+            
+            <div class="steps">
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <h3>Mantieni la Calma</h3>
+                    <p>
+                        Il primo passo è restare calmi e non farsi prendere dal panico. Respirate profondamente, 
+                        fate alcuni respiri lenti e consapevoli. Un atteggiamento sereno può aiutare a mantenere la situazione 
+                        sotto controllo e a comunicare meglio eventuali azioni.
+                    </p>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <h3>Osserva da una Distanza Sicura</h3>
+                    <p>
+                        Mantenetevi a una distanza prudenziale dall'alieno. Non avvicinatevi improvvisamente. 
+                        Osservate il suo comportamento, i suoi movimenti e le sue intenzioni. Cercate di capire se l'alieno 
+                        sembri pacifico o ostile. Fate attenzione ai segnali non verbali.
+                    </p>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <h3>Registra l'Avvistamento</h3>
+                    <p>
+                        Se possibile, cercate di documentare l'avvenimento. Prendete foto o video con il vostro telefono, 
+                        annotate l'ora, la data, il luogo e una descrizione dettagliata dell'alieno. Questi dati saranno 
+                        preziosi per le autorità competenti e la comunità scientifica.
+                    </p>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">4</span>
+                    <h3>Comunica in Modo Pacifico</h3>
+                    <p>
+                        Se l'alieno non mostra segni di aggressività, cercate di comunicare in modo pacifico. 
+                        Usate gesti lenti e non minacciosi. Provate con semplici saluti e suoni. Non fate movimenti bruschi 
+                        e mantenete il contatto visivo (se possibile e sicuro).
+                    </p>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">5</span>
+                    <h3>Avvisate le Autorità</h3>
+                    <p>
+                        Contattate immediatamente le forze dell'ordine locali, i carabinieri o il numero di emergenza. 
+                        Comunicate loro l'ubicazione esatta dell'avvistamento, una descrizione dell'alieno e la situazione 
+                        attuale. Loro sapranno come procedere e proteggervi.
+                    </p>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">6</span>
+                    <h3>Seguite le Istruzioni ufficiali</h3>
+                    <p>
+                        Una volta contattate le autorità, seguite scrupulosamente le loro istruzioni. Evacutate l'area se 
+                        richiesto, cercate riparo in un luogo sicuro e non interferite con le operazioni di risposta all'emergenza. 
+                        Le autorità dispongono del training e dell'equipaggiamento necessario.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="do-dont">
+                <div class="do">
+                    <h4>✓ DA FARE</h4>
+                    <ul>
+                        <li>Restare calmi e tranquilli</li>
+                        <li>Mantenere una distanza sicura</li>
+                        <li>Documentare l'avvenimento</li>
+                        <li>Essere pacifico e non minacciosi</li>
+                        <li>Contattare le autorità</li>
+                        <li>Obbedire agli ordini ufficiali</li>
+                        <li>Cercare rifugio se necessario</li>
+                        <li>Avvisare gli altri su pericoli</li>
+                    </ul>
+                </div>
+                
+                <div class="dont">
+                    <h4>✗ DA NON FARE</h4>
+                    <ul>
+                        <li>Farsi prendere dal panico</li>
+                        <li>Avvicinarsi aggressivamente</li>
+                        <li>Utilizzare armi senza motivo</li>
+                        <li>Fare movimenti bruschi e improvvisi</li>
+                        <li>Ignorare le autorità</li>
+                        <li>Toccare l'alieno senza autorizzazione</li>
+                        <li>Sparare senza motivo legittimo</li>
+                        <li>Diffondere falsi allarmi</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="warning">
+                <strong>⚠️ AVVERTENZA IMPORTANTE:</strong>
+                <p>
+                    Se l'alieno mostra segni di aggressività (armi, movimenti minacciosi), abbandonate immediatamente 
+                    l'area e cercate protezione. Contattate le autorità di emergenza e fornite loro informazioni dettagliate 
+                    della minaccia. La vostra sicurezza è la priorità assoluta.
+                </p>
+            </div>
+        </main>
+        
+        <footer>
+            <p><strong>Avvistamenti Alieni - Guida di Sopravvivenza</strong></p>
+            <p>Rimani vigile, rimani sicuro, rimani preparato! 👽</p>
+            <p style="margin-top: 15px; font-size: 0.9em; color: #999;">
+                © 2026 - Per scopi educativi e di intrattenimento
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
